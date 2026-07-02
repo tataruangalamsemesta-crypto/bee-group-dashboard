@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEE Group Finance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="finance.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">🐝 BEE Group Dashboard</div>
+        <div class="navbar-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="bee-group-workflow.html" class="nav-link">Workflow</a>
+            <a href="bee-group-finance-page.html" class="nav-link active">Finance</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>💰 Finance Unit Dashboard</h1>
+            <div class="header-date">Week of <span id="weekDate"></span></div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="summary-icon">💵</div>
+                <div class="summary-content">
+                    <h4>Total Revenue</h4>
+                    <p class="summary-value">Rp 5.2B</p>
+                    <p class="summary-change">↑ 12% vs last week</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">📊</div>
+                <div class="summary-content">
+                    <h4>Budget Spent</h4>
+                    <p class="summary-value">Rp 3.8B</p>
+                    <p class="summary-change">↓ 5% vs budget</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">📈</div>
+                <div class="summary-content">
+                    <h4>Net Profit</h4>
+                    <p class="summary-value">Rp 1.4B</p>
+                    <p class="summary-change">↑ 18% vs target</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">⚠️</div>
+                <div class="summary-content">
+                    <h4>Risk Level</h4>
+                    <p class="summary-value">🟡 MEDIUM</p>
+                    <p class="summary-change">4 alerts active</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Finance Metrics -->
+        <div class="metrics-section">
+            <h2>📋 Finance Metrics</h2>
+            <div class="metrics-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Target</th>
+                            <th>Actual</th>
+                            <th>Variance</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Revenue - Product A</td>
+                            <td>Rp 2.0B</td>
+                            <td>Rp 2.1B</td>
+                            <td style="color: #10b981;">+5%</td>
+                            <td><span class="badge-green">🟢 On Track</span></td>
+                        </tr>
+                        <tr>
+                            <td>Revenue - Product B</td>
+                            <td>Rp 1.8B</td>
+                            <td>Rp 1.6B</td>
+                            <td style="color: #ef4444;">-11%</td>
+                            <td><span class="badge-red">🔴 Behind</span></td>
+                        </tr>
+                        <tr>
+                            <td>Revenue - Services</td>
+                            <td>Rp 1.5B</td>
+                            <td>Rp 1.5B</td>
+                            <td style="color: #6b7280;">0%</td>
+                            <td><span class="badge-gray">⚪ Neutral</span></td>
+                        </tr>
+                        <tr>
+                            <td>Operating Costs</td>
+                            <td>Rp 2.5B</td>
+                            <td>Rp 2.4B</td>
+                            <td style="color: #10b981;">-4%</td>
+                            <td><span class="badge-green">🟢 On Track</span></td>
+                        </tr>
+                        <tr>
+                            <td>Marketing Budget</td>
+                            <td>Rp 0.8B</td>
+                            <td>Rp 0.9B</td>
+                            <td style="color: #f59e0b;">+12%</td>
+                            <td><span class="badge-yellow">🟡 At Risk</span></td>
+                        </tr>
+                        <tr>
+                            <td>R&D Investment</td>
+                            <td>Rp 0.6B</td>
+                            <td>Rp 0.5B</td>
+                            <td style="color: #10b981;">-17%</td>
+                            <td><span class="badge-green">🟢 On Track</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Cash Flow Analysis -->
+        <div class="cashflow-section">
+            <h2>💸 Cash Flow Analysis</h2>
+            <div class="cashflow-grid">
+                <div class="cashflow-item">
+                    <h4>Inflows This Week</h4>
+                    <p class="cashflow-value">Rp 5.2B</p>
+                    <div class="cashflow-breakdown">
+                        <p>Product A: Rp 2.1B</p>
+                        <p>Product B: Rp 1.6B</p>
+                        <p>Services: Rp 1.5B</p>
+                    </div>
+                </div>
+                <div class="cashflow-item">
+                    <h4>Outflows This Week</h4>
+                    <p class="cashflow-value">Rp 3.8B</p>
+                    <div class="cashflow-breakdown">
+                        <p>Operations: Rp 2.4B</p>
+                        <p>Marketing: Rp 0.9B</p>
+                        <p>R&D: Rp 0.5B</p>
+                    </div>
+                </div>
+                <div class="cashflow-item">
+                    <h4>Net Cash Flow</h4>
+                    <p class="cashflow-value" style="color: #10b981;">Rp 1.4B</p>
+                    <div class="cashflow-breakdown">
+                        <p>Cash Reserve: Rp 12.5B</p>
+                        <p>Days of Cash: 94 days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alerts & Actions -->
+        <div class="alerts-section">
+            <h2>⚠️ Active Alerts</h2>
+            <div class="alerts-list">
+                <div class="alert alert-warning">
+                    <span class="alert-icon">🟡</span>
+                    <div>
+                        <strong>Marketing Budget Overrun</strong>
+                        <p>Marketing spending exceeded budget by 12%. Review campaign efficiency.</p>
+                    </div>
+                </div>
+                <div class="alert alert-danger">
+                    <span class="alert-icon">🔴</span>
+                    <div>
+                        <strong>Product B Revenue Drop</strong>
+                        <p>Product B revenue down 11% from target. Investigate market conditions.</p>
+                    </div>
+                </div>
+                <div class="alert alert-info">
+                    <span class="alert-icon">ℹ️</span>
+                    <div>
+                        <strong>R&D Savings Achieved</strong>
+                        <p>R&D spending 17% below target. Reallocate to high-priority projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Items -->
+        <div class="actions-section">
+            <h2>✅ Action Items</h2>
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="showFinanceForm()">📝 Add Finance Note</button>
+                <button class="btn btn-secondary" onclick="downloadReport()">📥 Download Report</button>
+                <button class="btn btn-secondary" onclick="sendAlert()">📧 Send Alert</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Finance Update Modal -->
+    <div id="financeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📝 Finance Update</h2>
+                <button class="close-btn" onclick="closeFinanceForm()">&times;</button>
+            </div>
+            <form id="financeForm" onsubmit="saveFinanceUpdate(event)">
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="financeCategory" required>
+                        <option>Select Category</option>
+                        <option>Revenue Update</option>
+                        <option>Cost Control</option>
+                        <option>Budget Adjustment</option>
+                        <option>Risk Alert</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Amount (Rp)</label>
+                    <input type="number" id="financeAmount" placeholder="Enter amount" required>
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="financeNotes" placeholder="Add notes..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">💾 Save Update</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 BEE Group Dashboard. Last updated: <span id="lastUpdate"></span></p>
+    </footer>
+
+    <script src="finance.js"></script>
+</body>
+</html>

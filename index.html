@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEE Group Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">🐝 BEE Group Dashboard</div>
+        <div class="navbar-menu">
+            <a href="index.html" class="nav-link active">Dashboard</a>
+            <a href="bee-group-workflow.html" class="nav-link">Workflow</a>
+            <a href="bee-group-finance-page.html" class="nav-link">Finance</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero-section">
+            <h1>🐝 BEE Group - Real-time Status Tracking</h1>
+            <p>Monitor KPI, track progress, dan kelola weekly updates secara realtime</p>
+        </div>
+
+        <div class="quick-links">
+            <a href="bee-group-workflow.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Dashboard Workflow</h3>
+                    <p>Real-time status tracking dengan traffic light indicators</p>
+                </div>
+            </a>
+            <a href="bee-group-finance-page.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <h3>Finance Unit</h3>
+                    <p>Monitor target vs actual untuk unit finance</p>
+                </div>
+            </a>
+            <div class="card">
+                <div class="card-icon">📝</div>
+                <h3>Weekly Updates</h3>
+                <p>Form input untuk pencapaian, bottleneck, dan rencana aksi</p>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <h2>✨ Fitur Unggulan</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🔴🟡🟢</div>
+                    <h4>Traffic Light Status</h4>
+                    <p>Visualisasi status real-time dengan indicator yang jelas</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📈</div>
+                    <h4>KPI Tracking</h4>
+                    <p>Monitor target vs actual untuk setiap unit</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⏰</div>
+                    <h4>Weekly Updates</h4>
+                    <p>Form input terstruktur untuk update mingguan</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📋</div>
+                    <h4>Activity Log</h4>
+                    <p>Timeline lengkap aktivitas stakeholders</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💾</div>
+                    <h4>Auto-save</h4>
+                    <p>Semua perubahan otomatis tersimpan di browser</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <h4>GitHub Pages</h4>
+                    <p>Deploy otomatis setiap push ke main branch</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 BEE Group Dashboard. All rights reserved.</p>
+        <p>Last updated: <span id="lastUpdate"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById('lastUpdate').textContent = new Date().toLocaleDateString('id-ID');
+    </script>
+</body>
+</html>

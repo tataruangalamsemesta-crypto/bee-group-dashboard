@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEE Group Workflow Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="workflow.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">🐝 BEE Group Dashboard</div>
+        <div class="navbar-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="bee-group-workflow.html" class="nav-link active">Workflow</a>
+            <a href="bee-group-finance-page.html" class="nav-link">Finance</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>📊 Real-time Status Tracking</h1>
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="showWeeklyForm()">+ Weekly Update</button>
+                <button class="btn btn-secondary" onclick="exportData()">📥 Export</button>
+                <button class="btn btn-secondary" onclick="clearData()">🗑️ Clear</button>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Sales Unit -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <h3>Sales Unit</h3>
+                    <span class="status-badge status-green">🟢 On Track</span>
+                </div>
+                <div class="kpi-section">
+                    <div class="kpi-item">
+                        <div class="kpi-label">Revenue Target</div>
+                        <div class="kpi-progress">
+                            <div class="progress-bar" style="width: 85%;"></div>
+                            <div class="progress-text">85% (Rp 850M / Rp 1B)</div>
+                        </div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-label">New Customers</div>
+                        <div class="kpi-progress">
+                            <div class="progress-bar" style="width: 92%;"></div>
+                            <div class="progress-text">92% (92 / 100)</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-details" onclick="showDetails('Sales')">Lihat Details</button>
+            </div>
+
+            <!-- Marketing Unit -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <h3>Marketing Unit</h3>
+                    <span class="status-badge status-yellow">🟡 At Risk</span>
+                </div>
+                <div class="kpi-section">
+                    <div class="kpi-item">
+                        <div class="kpi-label">Campaign Reach</div>
+                        <div class="kpi-progress">
+                            <div class="progress-bar" style="width: 65%; background: #fbbf24;"></div>
+                            <div class="progress-text">65% (6.5M / 10M)</div>
+                        </div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-label">Engagement Rate</div>
+                        <div class="kpi-progress">
+                            <div class="progress-bar" style="width: 72%; background: #fbbf24;"></div>
+                            <div class="progress-text">72% (7.2% / 10%)</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-details" onclick="showDetails('Marketing')">Lihat Details</button>
+            </div>
+
+            <!-- Operations Unit -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <h3>Operations Unit</h3>
+                    <span class="status-badge status-red">🔴 Behind</span>
+                </div>
+                <div class="kpi-section">
+                    <div class="kpi-item">
+                        <div class="kpi-label">Delivery On-time</div>
+                        <div class="kpi-progress">
+                            <div class="progress-bar" style="width: 58%; background: #ef4444;"></div>
+                            <div class="progress-text">58% (58 / 100)</div>
+                        </div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-label">Cost Control</div>
+                        <div class="kpi-progress">
+                            <div class="progress-bar" style="width: 62%; background: #ef4444;"></div>
+                            <div class="progress-text">62% (Rp 62M / Rp 100M)</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-details" onclick="showDetails('Operations')">Lihat Details</button>
+            </div>
+
+            <!-- HR Unit -->
+            <div class="unit-card">
+                <div class="unit-header">
+                    <h3>HR Unit</h3>
+                    <span class="status-badge status-green">🟢 On Track</span>
+                </div>
+                <div class="kpi-section">
+                    <div class="kpi-item">
+                        <div class="kpi-label">Recruitment</div>
+                        <div class="kpi-progress">
+                            <div class="progress-bar" style="width: 88%;"></div>
+                            <div class="progress-text">88% (22 / 25)</div>
+                        </div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-label">Training Completion</div>
+                        <div class="kpi-progress">
+                            <div class="progress-bar" style="width: 95%;"></div>
+                            <div class="progress-text">95% (95 / 100)</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-details" onclick="showDetails('HR')">Lihat Details</button>
+            </div>
+        </div>
+
+        <!-- Activity Log -->
+        <div class="activity-section">
+            <h2>📋 Activity Log</h2>
+            <div class="activity-log" id="activityLog">
+                <div class="activity-item">
+                    <div class="activity-time">Hari ini, 14:30</div>
+                    <div class="activity-content">
+                        <strong>Sales Unit</strong> - Update: Revenue mencapai Rp 850M (85% dari target)
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-time">Hari ini, 13:15</div>
+                    <div class="activity-content">
+                        <strong>Marketing Unit</strong> - Alert: Campaign engagement dibawah target 72%
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-time">Kemarin, 16:45</div>
+                    <div class="activity-content">
+                        <strong>Operations Unit</strong> - Warning: Delivery on-time turun menjadi 58%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Weekly Update Modal -->
+    <div id="weeklyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📝 Weekly Update</h2>
+                <button class="close-btn" onclick="closeWeeklyForm()">&times;</button>
+            </div>
+            <form id="weeklyForm" onsubmit="saveWeeklyUpdate(event)">
+                <div class="form-group">
+                    <label>Unit Name</label>
+                    <select id="unitName" required>
+                        <option>Select Unit</option>
+                        <option>Sales Unit</option>
+                        <option>Marketing Unit</option>
+                        <option>Operations Unit</option>
+                        <option>HR Unit</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Pencapaian Minggu Ini</label>
+                    <textarea id="achievement" placeholder="Tulis pencapaian..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Bottleneck / Hambatan</label>
+                    <textarea id="bottleneck" placeholder="Tulis hambatan yang dihadapi..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Rencana Aksi Minggu Depan</label>
+                    <textarea id="actionPlan" placeholder="Tulis rencana aksi..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">💾 Save Update</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Details Modal -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="detailsTitle"></h2>
+                <button class="close-btn" onclick="closeDetails()">&times;</button>
+            </div>
+            <div id="detailsContent"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 BEE Group Dashboard. Last updated: <span id="lastUpdate"></span></p>
+    </footer>
+
+    <script src="workflow.js"></script>
+</body>
+</html>
